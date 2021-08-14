@@ -1,0 +1,13 @@
+
+name = "MJ"
+license = "MIT"
+licenselink = "LICENSE"
+description = "MJ Theme for hugo"
+homepage = "https://github.com/matrixji/hugo-theme-zozo"
+tags = ["blog", "theme"]
+features = ["blog", "theme"]
+min_version = "0.81"
+
+[author]
+  name = "Ji Bin"
+  homepage = "https://jibin.net"
