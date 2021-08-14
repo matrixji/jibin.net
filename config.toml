@@ -1,0 +1,9 @@
+baseURL = "https://jibin.net/"
+languageCode = "zh-cn"
+title = "代码备忘录"
+theme = "mj"
+
+uglyurls = true
+
+[permalinks]
+  posts = "/:year/:month/:filename"
