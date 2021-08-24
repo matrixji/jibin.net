@@ -1,17 +1,17 @@
 {{ $paginator := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) }}
 {{ range $paginator.Pages }}
 <div class="post animated fadeInDown">
-    <div class="post_title">
+    <div class="post-title">
         <h2><a href='{{ .RelPermalink }}'>{{ .Title }}</a></h2>
     </div>
     {{ if .Site.Params.enableSummary }}
     <div class="list">
-        <div class="post_content markdown">
+        <div class="post-content markdown">
             <p>{{ .Summary }}......</p>
         </div>
     </div>
     {{ end }}
-    <div class="post_footer">
+    <div class="post-footer">
         <div class="meta">
             <div class="info">
                 <span class="field">
@@ -22,7 +22,7 @@
                 <span class="field tags">
                     <i class="ri-stack-line"></i>
                     {{ range . }}
-                    <a href="{{ "tags" | absURL }}/{{ . | urlize }}/">{{ . }}</a>
+                    <a href="{{ "tags" | absURL }}/{{ . | urlize }}.html">{{ . }}</a>
                     {{ end }}
                 </span>
                 {{ end }}

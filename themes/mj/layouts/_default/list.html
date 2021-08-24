@@ -5,15 +5,15 @@
         {{ partial "nav.html" . }}
         {{ partial "header.html" . }}
         <div class="content">
-            <div class="list_with_title">
+            <div class="list-with-title">
                 {{ range .Data.Pages.GroupByDate "2006" }}
-                <div class="listing_title">{{ .Key }}</div>
+                <div class="listing-title">{{ .Key }}</div>
                 <div class="listing">
                     {{ range .Pages }}
-                    <div class="listing_item">
-                        <div class="listing_post">
+                    <div class="listing-item">
+                        <div class="listing-post">
                             <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                            <div class="post_time"><span class="date">{{ .Date.Format "01-02" }}</span></div>
+                            <div class="post-time"><span class="date">{{ .Date.Format "01-02" }}</span></div>
                         </div>
                     </div>
                     {{ end }}
@@ -22,7 +22,7 @@
             </div>
             <div class="pagination"></div>
         </div>
-        <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
+        <a id="back-to-top" href="#" class="back-to-top"><i class="ri-arrow-up-s-line"></i></a>
     </div>
     {{ partial "footer.html" . }}
     {{ partial "js.html" . }}

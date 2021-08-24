@@ -4,7 +4,7 @@
 $(document).ready((function (_this) {
   return function () {
     let bt
-    bt = $('#back_to_top')
+    bt = $('#back-to-top')
     if ($(document).width() > 480) {
       $(window).scroll(function () {
         let st
@@ -29,8 +29,8 @@ $(document).ready((function (_this) {
 $(document).ready((function (_this) {
   return function () {
     let nav,icon
-    icon = $('#menu_icon')
-    nav = $('#site_nav')
+    icon = $('#menu-icon')
+    nav = $('#site-nav')
     icon.click(function () {
       nav.slideToggle(250)
     })

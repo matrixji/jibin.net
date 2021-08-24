@@ -1,0 +1,18 @@
+baseURL: https://jibin.net/
+languageCode: zh-cn
+title: 代码备忘录
+theme: mj
+uglyurls: true
+pygmentsUseClasses: false
+
+permalinks:
+  posts: /:year/:month/:filename
+
+markup:
+  tableOfContents:
+    endLevel: 3
+    ordered: false
+    startLevel: 2
+  highlight:
+    guessSyntax: true
+    style: monokailight

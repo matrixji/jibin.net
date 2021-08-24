@@ -5,7 +5,7 @@
         {{ partial "nav.html" . }}
         {{ partial "header.html" . }}
         <div class="content">
-            <div class="page_tags">
+            <div class="page-tags">
                 <h1>(≥o≤)</h1>
                 <h2>{{ with .Site.Params.title404 }}{{ . }}{{ else }}404 Page Not Found{{ end }}</h2>
                 <h3><a href="{{ .Site.BaseURL }}">{{ i18n "home" }}</a></h3>

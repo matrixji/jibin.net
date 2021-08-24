@@ -5,21 +5,25 @@
         {{ partial "nav.html" . }}
         {{ partial "header.html" . }}
         <div class="content">
-            <div class="post_page">
+            <div class="post-page">
                 <div class="post animate__animated animate__fadeInDown">
-                    <div class="post_title post_detail_title">
+                    <div class="post-title post-detail-title">
                         <h2><a href='{{ .RelPermalink }}'>{{ .Title }}</a></h2>
                         <span class="date">{{ .Date.Format "2006.01.02" }}</span>
                     </div>
-                    <div class="post_content markdown">{{ .Content }}</div>
-                    <div class="post_footer">
+                    <!-- TODO -->
+                    <div id="toc" class="">
+                        {{ .TableOfContents }}
+                    </div>
+                    <div class="post-content markdown">{{ .Content }}</div>
+                    <div class="post-footer">
                         {{ with .Params.tags }}
                         <div class="meta">
                             <div class="info">
                                 <span class="field tags">
                                     <i class="ri-stack-line"></i>
                                     {{ range . }}
-                                    <a href="{{ "tags" | absURL }}/{{ . | urlize }}/">{{ . }}</a>
+                                    <a href="{{ "tags" | absURL }}/{{ . | urlize }}.html">{{ . }}</a>
                                     {{ end }}
                                 </span>
                             </div>
@@ -31,12 +35,12 @@
                 {{ if .Site.Params.valine.enable }}
                 {{ partial "comments.html" . }}
                 {{ else }}
-                <div class="doc_comments">{{ template "_internal/disqus.html" . }}</div>
+                <div class="doc-comments">{{ template "_internal/disqus.html" . }}</div>
                 {{ end }}
             </div>
         </div>
     </div>
-    <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
+    <a id="back-to-top" href="#" class="back-to-top"><i class="ri-arrow-up-s-line"></i></a>
     {{ partial "footer.html" . }}
     {{ partial "js.html" . }}
 </body>
