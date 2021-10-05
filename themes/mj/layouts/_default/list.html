@@ -1,31 +1,31 @@
 {{ partial "head.html" . }}
 
 <body>
-    <div class="main animate__animated animate__fadeInDown">
-        {{ partial "nav.html" . }}
-        {{ partial "header.html" . }}
-        <div class="content">
-            <div class="list-with-title">
-                {{ range .Data.Pages.GroupByDate "2006" }}
-                <div class="listing-title">{{ .Key }}</div>
-                <div class="listing">
-                    {{ range .Pages }}
-                    <div class="listing-item">
-                        <div class="listing-post">
-                            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                            <div class="post-time"><span class="date">{{ .Date.Format "01-02" }}</span></div>
-                        </div>
-                    </div>
-                    {{ end }}
-                </div>
-                {{ end }}
-            </div>
-            <div class="pagination"></div>
-        </div>
-        <a id="back-to-top" href="#" class="back-to-top"><i class="ri-arrow-up-s-line"></i></a>
-    </div>
-    {{ partial "footer.html" . }}
-    {{ partial "js.html" . }}
+	<div class="main animate__animated animate__fadeInDown">
+		{{ partial "nav.html" . }}
+		{{ partial "header.html" . }}
+		<div class="content">
+			<div class="list-with-title">
+				{{ range .Data.Pages.GroupByDate "2006" }}
+				<div class="listing-title">{{ .Key }}</div>
+				<div class="listing">
+					{{ range .Pages }}
+					<div class="listing-item">
+						<div class="listing-post">
+							<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+							<div class="post-time"><span class="date">{{ .Date.Format "01-02" }}</span></div>
+						</div>
+					</div>
+					{{ end }}
+				</div>
+				{{ end }}
+			</div>
+			<div class="pagination"></div>
+		</div>
+		<a id="back-to-top" href="#" class="back-to-top"><i class="ri-arrow-up-s-line"></i></a>
+	</div>
+	{{ partial "footer.html" . }}
+	{{ partial "js.html" . }}
 </body>
 
 </html>
