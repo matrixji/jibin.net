@@ -16,3 +16,6 @@ markup:
   highlight:
     guessSyntax: true
     style: monokailight
+
+staticDir:
+ - static

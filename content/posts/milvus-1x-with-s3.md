@@ -10,17 +10,17 @@ categories:
   - Milvus
 ---
 
-# 背景
+## 背景
 Milvus 1.1.1 版本开始比较完整地支持了S3作为存储后端，在此之前，我们在1.1及之前版本部署分布式方案的时候，只能采用NFS的方案。相比来说S3有着更加接地气的云原生表现。
 
 本文简单记录了使用Milvus 1.x版本，通过官方的Helm Chart在Kubernetes环境中部署基于S3 存储的Milvus 集群。
 
-## 测试环境
+### 测试环境
 
 - Kubernetes: 1.22.0
 - S3: Ceph Radosgw (Ceph 16.2.5)
 
-# 部署准备
+## 部署准备
 
 我们需要首先搭建好一个可用S3集群，这可以是使用Minio搭建的 Server或者 Gateway，也可以是Ceph Radosgw，目前由于实现的限制，对于HTTPS的 S3 在Milvus里面是不支持。
 
@@ -39,8 +39,8 @@ Milvus 1.1.1 版本开始比较完整地支持了S3作为存储后端，在此�
 
 如果你正在参考此文搭建，需要注意在示例代码中替换这些替换这些参数。
 
-# 部署过程
-## 添加Helm
+## 部署过程
+### 添加Helm
 
 添加Milvus官方的Helm Repo
 
@@ -51,13 +51,13 @@ helm repo update
 
 当然也可以从官方的Helm Chart的代码仓库下载 1.1分支的Helm Chart，地址： https://github.com/milvus-io/milvus-helm
 
-## 需要配置的参数
+### 需要配置的参数
 
-### 开启集群
+#### 开启集群
 
 `cluster.enabled` 需要设置为 `true`
 
-### S3 相关的参数
+#### S3 相关的参数
 ```yaml
 storage:
   s3:
@@ -69,12 +69,12 @@ storage:
     bucket: milvus-test
 ```
 
-### MySQL存储的设置
+#### MySQL存储的设置
 在我们的测试中，因为 MySQL 还是使用的是非共享持久化存储(通过PV提供)，并且 Kubernetes 集群预先没有配置默认的 StorageClass, 因此也需要指定 `mysql.persistence.storageClass`。
 当然如果仅是测试，你也可以关闭MySQL的数据持久化，配置 `mysql.persistence.enabled` 为 `false`
 
 
-## 安装部署 
+### 安装部署 
 确认好参数之后，我们就可以直接基于Helm 进行部署了
 
 ```bash
@@ -132,7 +132,7 @@ milvus-test-writable-5f67957f94-6sg66   1/1     Running   0          8h
 [root@node01 test_milvus]#
 ```
 
-## Hello Milvus
+### Hello Milvus
 接下来我们用官方 Hello Milvus来测试一下集群。
 
 ```
