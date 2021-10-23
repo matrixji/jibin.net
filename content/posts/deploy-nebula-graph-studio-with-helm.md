@@ -59,3 +59,8 @@ $ helm upgrade --install my-studio \
 最后，安利大家一个小工具，如果你也希望通过Github pages 来发布Helm Chart，这个工具无疑是一个能够快速集成的利器。
 
 [helm/chart-releaser](https://github.com/helm/chart-releaser) 
+
+
+## UPDATES
+
+- PR: [PR30](https://github.com/vesoft-inc/nebula-studio/pull/30) for merge to official repository - 2021/10/15
