@@ -2,6 +2,12 @@
 title: "Starting Milvus2 on Windows"
 date: 2021-10-17T09:14:46+08:00
 draft: false
+tags:
+  - milvus
+  - windows
+categories:
+  - Development
+  - Milvus
 ---
 
 ![Milvus On Windows](/images/milvus-on-windows.png)

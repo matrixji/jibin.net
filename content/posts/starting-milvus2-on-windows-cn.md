@@ -2,6 +2,12 @@
 title: "在 Windows上运行Milvus 2.0"
 date: 2021-10-18T16:22:00+08:00
 draft: false
+tags:
+  - milvus
+  - windows
+categories:
+  - Development
+  - Milvus
 ---
 
 ![Milvus On Windows](/images/milvus-on-windows.png)

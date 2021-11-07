@@ -2,6 +2,13 @@
 title: "[MCW2021-44] std::jthread 简要说明"
 date: 2021-11-07T22:53:10+08:00
 draft: false
+tags:
+  - c++
+  - jthread
+  - Modern Cpp Weekly
+categories:
+  - Development
+  - c++
 ---
 
 - 需要标准: c++20
@@ -70,5 +77,5 @@ void jthread_loop(const std::stop_token& stop)
 
 
 ## 备注
-考虑到文章会通过微信转发，我尽量使用了`using`来减少代码中的宽度。如果觉得阅读不便利，还望指正。
+Modern Cpp Weekly 系列，计划每周一篇介绍自己对现代C++的理解，考虑到文章会通过微信转发，我尽量使用了`using`来减少代码中的宽度。如果觉得阅读不便利，还望指正。
 
