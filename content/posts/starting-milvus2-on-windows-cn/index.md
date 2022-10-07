@@ -10,7 +10,7 @@ categories:
   - Milvus
 ---
 
-![Milvus On Windows](/images/milvus-on-windows.png)
+![Milvus On Windows](milvus-on-windows.png)
 
 ## 简述
 

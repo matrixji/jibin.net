@@ -1,9 +1,18 @@
 baseURL: https://jibin.net/
-languageCode: zh-cn
-title: 代码备忘录
-theme: mj
+title: &title 代码备忘录
+theme: LoveIt
 uglyurls: true
 pygmentsUseClasses: false
+languageCode: en
+defaultContentLanguage: en
+hasCJKLanguage: true
+paginate: 10
+enableEmoji: true
+
+author:
+  name: Ji Bin
+  email: matrixji@live.com
+  link: https://jibin.net/
 
 permalinks:
   posts: /:year/:month/:filename
@@ -19,3 +28,58 @@ markup:
 
 staticDir:
  - static
+
+menu:
+  main:
+    - identifier: posts
+      weight: 10
+      name: Posts
+      url: /posts.html
+      title: Posts
+    - identifier: tags
+      weight: 11
+      name: Tags
+      url: /tags.html
+      title: Tags
+    - identifier: categories
+      weight: 20
+      name: Categories
+      url: /categories.html
+      title: Categories
+    - identifier: about
+      weight: 30
+      name: About
+      url: /about.html
+      title: About
+    - identifier: github
+      weight: 90
+      pre: |
+        <i class="fab fa-github fa-fw" aria-hidden="true"></i>
+      name:
+      url: https://github.com/matrixji/jibin.net
+      title: GitHub
+
+params:
+  social:
+    github:
+      id: matrixji
+    twitter:
+      id: matrixji
+    zhihu:
+      id: matrixji
+    paypal:
+      id: jibin1982
+    stackoverflow:
+      id: 13205792/ji-bin
+  title: *title
+  description: ""
+  header:
+    title:
+      name: *title
+  home:
+    profile:
+      subtitle: ""
+  cdn:
+    data:
+
+  

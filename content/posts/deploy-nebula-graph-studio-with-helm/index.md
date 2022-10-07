@@ -26,7 +26,7 @@ categories:
 
 鉴于Nebula importer和studio之间存在的共享存储，同时又考虑到大部分的Kubernetes测试和生产环境，并不一定能提供RWX的storageClass，因此，第一次实现我采取了一个Pod里面塞进了4个Container的方案。参考下图：
 
-![Nebula Graph Studio Deploy Arch](/images/nebula-studio-helm-pod-arch.png)
+![Nebula Graph Studio Deploy Arch](nebula-studio-helm-pod-arch.png)
 
 具体代码的实现放置在这儿： [matrixji/nebula-studio-helm](https://github.com/matrixji/nebula-studio-helm)
 
