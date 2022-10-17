@@ -1,0 +1,15 @@
+{
+    "name": "Hugo for jibin.net",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "workspaceFolder": "/workspace",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "budparr.language-hugo-vscode"
+            ]
+        }
+    }
+}

@@ -81,5 +81,7 @@ params:
       subtitle: ""
   cdn:
     data:
-
+  page:
+    math:
+      enable: true
   
