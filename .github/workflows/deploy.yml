@@ -3,7 +3,7 @@ name: "Deyloy"
 on:
   push:
     branches:
-      - "main"
+      - "master"
 
 jobs:
   deploy-site:
