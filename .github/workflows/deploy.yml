@@ -1,0 +1,30 @@
+name: "Deyloy"
+
+on:
+  push:
+    branches:
+      - "master"
+
+jobs:
+  deploy-site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+      - name: build with hugo
+        env:
+          LANG: en_US.utf-8
+          TZ: Asia/Shanghai
+        run: |
+          sudo snap install hugo
+          cd ${GITHUB_WORKSPACE}
+          make build
+      - name: install ssh key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSHKEY_JIBIN_NET }} 
+          known_hosts: ~/.ssh/known_hosts
+      - name: deploy site
+        run: |
+          rsync -avpz -e "ssh -o StrictHostKeyChecking=no" --delete public/ root@jibin.net:/opt/jibin.net
