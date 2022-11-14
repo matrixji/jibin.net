@@ -1,0 +1,28 @@
+name: "Deyloy"
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  deploy-site:
+    runs-on: ubuntu-latest
+    container: golang:latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: build with hugo
+        env:
+          LANG: en_US.utf-8
+          PATH: /root/.local/bin:${PATH}
+          TZ: Asia/Shanghai
+        run: |
+          apt update
+          apt install -y rsync
+          go env -w GO111MODULE=on
+          go install -v github.com/gohugoio/hugo@latest
+          cd ${GITHUB_WORKSPACE}
+          make build
+      - name: deploy site
+        run: |
+          rsync -avpz -e "ssh -i ${{ secrets.SSHKEY_JIBIN_NET }} -o StrictHostKeyChecking=no" --delete public/ root@jibin.net:/opt/jibin.net
