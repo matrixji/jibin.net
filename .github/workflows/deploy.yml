@@ -27,4 +27,4 @@ jobs:
           known_hosts: ~/.ssh/known_hosts
       - name: deploy site
         run: |
-          rsync -avpz -e "ssh -o StrictHostKeyChecking=no" --delete public/ root@jibin.net:/opt/jibin.net
+          rsync -avpz -e "ssh -o StrictHostKeyChecking=no" --delete public/ root@c3.jibin.net:/opt/jibin.net
