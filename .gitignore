@@ -1,4 +1,6 @@
 *.un~
+*.bkp
+*.out
 public/
 *.lock
 .DS_store
@@ -6,3 +8,4 @@ resources/
 
 #
 *.code-workspace
+

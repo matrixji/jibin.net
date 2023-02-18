@@ -7,6 +7,6 @@ RUN apt update
 RUN apt install -y rsync
 RUN go env -w GO111MODULE=on
 RUN go env -w GOPROXY=https://goproxy.cn,direct
-RUN go install -v github.com/gohugoio/hugo@latest
+RUN CGO_ENABLED=1 go install --tags extended github.com/gohugoio/hugo@latest
 
 EXPOSE 58082
