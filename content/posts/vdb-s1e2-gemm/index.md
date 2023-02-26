@@ -140,7 +140,7 @@ int main() {
 ```
 
 ## cublasSgemmEx
-CUDA上提供了其中的一个通用矩阵乘法的函数为`cublasSgemmEx`，其申明如下：
+CUDA上提供了其中的一个通用矩阵乘法的函数为`cublasSgemmEx`，其声明如下：
 ```c++
 cublasStatus_t cublasSgemmEx(cublasHandle_t handle,
                            cublasOperation_t transa,
