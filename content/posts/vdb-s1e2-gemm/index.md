@@ -10,7 +10,7 @@ categories:
   - Development
   - Vector Database
 ---
-接上回 [VDB-S1E1]({{< ref "../vdb-s1e1-distance-to-matmul" >}})，说了矩阵乘法在向量数据库中的地位，并且引出了`cblas_sgemm`和`cublasSgemmEx`这两个函数
+接上回 [VDB-S1E1]({{< ref "/posts/vdb-s1e1-distance-to-matmul" >}})，说了矩阵乘法在向量数据库中的地位，并且引出了`cblas_sgemm`和`cublasSgemmEx`这两个函数
 
 ## cblas_sgemm
 `cblas_sgemm`是一个通用的矩阵乘法函数，他的定义可以在LAPACK、OpenBLAS、MKL这样的BLAS库中找到。我们看一下他的定义情况：

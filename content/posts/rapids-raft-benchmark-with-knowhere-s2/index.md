@@ -14,7 +14,7 @@ categories:
 
 ## 背景
 
-上次 [RAFT在Knowhere上的一些评估测试-1]({{< ref "../rapids-raft-benchmark-with-knowhere-s1" >}})中，简单测试了RAFT和Faiss索引在Knowhere上的表现。但是其实从GTC 2023的内容上看，都在表明：RAFT索引其实比较适合做实时向量数据库查询系统，因此：小的NQ，高并发应该对RAFT来说会更加友好。另外在RAFT构建索引的时候，和Faiss是有差别的，这点目前很少有Benchmark的工具关注（索引构建的效率）。
+上次 [RAFT在Knowhere上的一些评估测试-1]({{< ref "/posts/rapids-raft-benchmark-with-knowhere-s1" >}})中，简单测试了RAFT和Faiss索引在Knowhere上的表现。但是其实从GTC 2023的内容上看，都在表明：RAFT索引其实比较适合做实时向量数据库查询系统，因此：小的NQ，高并发应该对RAFT来说会更加友好。另外在RAFT构建索引的时候，和Faiss是有差别的，这点目前很少有Benchmark的工具关注（索引构建的效率）。
 
 ## Milvus is GPU Ready
 在GTC 2023同期，Milvus也发布的支持GPU版本的 [2.3.0 Beta](https://github.com/milvus-io/milvus/releases/tag/v2.3.0-beta)，当然也包含了RAFT索引（GPU版本），因此我们可以基于Milvus对RAFT的索引进行测试了，这将更加系统地来评估这一索引的使用情况。

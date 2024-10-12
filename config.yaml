@@ -6,8 +6,10 @@ pygmentsUseClasses: false
 languageCode: en
 defaultContentLanguage: en
 hasCJKLanguage: true
-paginate: 10
 enableEmoji: true
+
+pagination:
+  pagerSize: 10
 
 author:
   name: Ji Bin
@@ -63,8 +65,7 @@ params:
   social:
     github:
       id: matrixji
-    twitter:
-      id: matrixji
+    twitter: matrixji
     zhihu:
       id: matrixji
     paypal:
